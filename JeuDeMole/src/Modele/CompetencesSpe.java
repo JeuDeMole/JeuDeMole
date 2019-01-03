@@ -13,7 +13,7 @@ public class CompetencesSpe
 	//Armure naturelle
 	public void armureNaturelle()
 	{
-		System.out.println("Vos reflexes deviennent plus vifs et vous confèrent une meilleure defense en combat");
+		System.out.println("Vos reflexes deviennent plus vifs et vous confÃ¨rent une meilleure defense en combat");
 		this.setArmure(this.getArmure() + 2);
 	}
 	//Science du critique
@@ -23,39 +23,39 @@ public class CompetencesSpe
 		this.setCritique(19);
 	}
 	
-	//Bénédictions
+	//BÃ©nÃ©dictions
 	public void benediction(PJ recevant)
 	{
-		System.out.println(this.getNom + " entonne un chant de guerre et se motive lui et tout ses alliés");
-		recevant.setForce(getforce +1);
-		recevant.setSagesse(getSagesse + 1);
-		this.setForce(getforce +1);
-		this.setSagesse(getSagesse + 1);
+		System.out.println(this.getNom + " entonne un chant de guerre et se motive lui et tout ses alliÃ©s");
+		recevant.setForce(recevant.getForce() + 1);
+		recevant.setSagesse(recevant.getSagesse() + 1);
+		this.setForce(this.getForce() + 1);
+		this.setSagesse(this.getSagesse() + 1);
 
 	}
 	public void finBenediction(PJ recevant)
 	{
-		recevant.setForce(getforce - 1);
-		recevant.setSagesse(getSagesse - 1);
-		this.setForce(getforce - 1);
-		this.setSagesse(getSagesse - 1);
+		recevant.setForce(recevant.getForce() - 1);
+		recevant.setSagesse(recevant.getSagesse() - 1);
+		this.setForce(this.getForce() - 1);
+		this.setSagesse(this.getSagesse() - 1);
 	}
 	
 	//Bouclier de la foi
 	public void BouclierDeLaFoi()
 	{
-		System.out.println("Vous inscrivez le symbole de votre foi sur votre bouclier afin d'augmenter sa résistance");
+		System.out.println("Vous inscrivez le symbole de votre foi sur votre bouclier afin d'augmenter sa rÃ©sistance");
 		this.setArmure(this.getArmure() + 2);
 	}
 	
-	//Soin Léger
+	//Soin LÃ©ger
 	public void soinLeger(PJ recevant)
 	{
 		System.out.println("Vous poser vos mains sur la blessure et vous sentez les plaies se guerir sous vos doigts");
-		recevant.setPV(recevant.getPV()+this.getSagesse());
-		if (recevant.getPV()<recevant.getPVMax())
+		recevant.setPV(recevant.getPV() + this.getSagesse());
+		if (recevant.getPV() > recevant.getPVMax())
 		{
-			recevant.setPV(recevant.getPVmax);
+			recevant.setPV(recevant.getPVmax());
 		}
 	}
 }
